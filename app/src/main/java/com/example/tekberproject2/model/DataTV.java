@@ -7,6 +7,8 @@ public class DataTV {
     private String firstAired;
     private String director;
     private String rating;
+
+    //biar bisa mengakses method set get yang ada di guest stars
     private GuestStar guestStar = new GuestStar();
     private String photos;
 

@@ -21,7 +21,6 @@ public class ListDataTV {
         ArrayList<DataTV> list = new ArrayList<>();
 
         for (String[] aData : data){
-            GuestStar guestStar = new GuestStar();
             DataTV dataTV = new DataTV();
             dataTV.setId(aData[0]);
             dataTV.setAiredSeason(aData[1]);

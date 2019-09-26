@@ -38,9 +38,6 @@ public class MainActivity extends AppCompatActivity {
         list.addAll(ListDataTV.getListData());
 
         showRecyclerCardView();
-
-
-
     }
 
     private void showRecyclerCardView() {

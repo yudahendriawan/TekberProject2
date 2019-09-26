@@ -6,4 +6,11 @@
     <string name="description">HIyahiyahiya</string>
     <string name="favorite">yap</string>
     <string name="share">yap</string>
+    <string name="id">Id</string>
+    <string name="aired_seas">Aired Seas.</string>
+    <string name="episode">Episode</string>
+    <string name="first_aired">First Aired</string>
+    <string name="director">Director</string>
+    <string name="rating">Rating</string>
+    <string name="guestars">Guestars</string>
 </resources>

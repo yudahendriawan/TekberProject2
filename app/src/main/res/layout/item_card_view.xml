@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_toEndOf="@id/img_item_photo"
-            android:text="Id"
+            android:text="@string/id"
             android:textColor="@color/colorPrimaryLight" />
 
         <TextView
@@ -64,7 +64,7 @@
             android:layout_below="@id/label_id"
             android:layout_marginStart="15dp"
             android:layout_toEndOf="@id/img_item_photo"
-            android:text="Aired Seas."
+            android:text="@string/aired_seas"
             android:textColor="@color/colorPrimaryLight" />
 
         <TextView
@@ -87,7 +87,7 @@
             android:layout_marginStart="15dp"
             android:layout_toEndOf="@id/img_item_photo"
             android:layout_marginTop="5dp"
-            android:text="Episode"
+            android:text="@string/episode"
             android:textColor="@color/colorPrimaryLight" />
 
         <TextView
@@ -110,7 +110,7 @@
             android:layout_below="@id/label_episode_name"
             android:layout_marginStart="15dp"
             android:layout_toEndOf="@id/img_item_photo"
-            android:text="First Aired"
+            android:text="@string/first_aired"
             android:textColor="@color/colorPrimaryLight" />
 
         <TextView
@@ -131,7 +131,7 @@
             android:layout_below="@id/label_first_aired"
             android:layout_marginStart="15dp"
             android:layout_toEndOf="@id/img_item_photo"
-            android:text="Director"
+            android:text="@string/director"
             android:textColor="@color/colorPrimaryLight" />
 
         <TextView
@@ -153,7 +153,7 @@
             android:layout_below="@id/label_director"
             android:layout_marginStart="15dp"
             android:layout_toEndOf="@id/img_item_photo"
-            android:text="Rating"
+            android:text="@string/rating"
             android:textColor="@color/colorPrimaryLight" />
 
         <TextView
@@ -175,7 +175,7 @@
             android:layout_below="@id/label_rating"
             android:layout_marginStart="15dp"
             android:layout_toEndOf="@id/img_item_photo"
-            android:text="Guestar"
+            android:text="@string/guestars"
             android:textColor="@color/colorPrimaryLight" />
 
         <TextView
