@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">TekberProject2</string>
+    <string name="animals_name">Haloo</string>
+    <string name="habitat">Haloo</string>
+    <string name="heroes_name">Yuda Hendriawan</string>
+    <string name="description">HIyahiyahiya</string>
+    <string name="favorite">yap</string>
+    <string name="share">yap</string>
 </resources>

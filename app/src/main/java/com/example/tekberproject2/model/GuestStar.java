@@ -2,37 +2,50 @@ package com.example.tekberproject2.model;
 
 public class GuestStar {
 
-    private int id;
-    private String name;
-    private boolean gender;
+    private String nama;
+    private String gender;
+    private String nama2;
+    private String gender2;
 
-    public GuestStar(int id, String name, boolean gender) {
-        this.id = id;
-        this.name = name;
+    public GuestStar() {
+    }
+
+    public GuestStar(String nama, String gender, String nama2, String gender2) {
+        this.nama = nama;
         this.gender = gender;
+        this.nama2 = nama2;
+        this.gender2 = gender2;
     }
 
-    public int getId() {
-        return id;
+    public String getNama() {
+        return nama;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setNama(String nama) {
+        this.nama = nama;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public boolean isGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(boolean gender) {
+    public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    public String getNama2() {
+        return nama2;
+    }
+
+    public void setNama2(String nama2) {
+        this.nama2 = nama2;
+    }
+
+    public String getGender2() {
+        return gender2;
+    }
+
+    public void setGender2(String gender2) {
+        this.gender2 = gender2;
     }
 }

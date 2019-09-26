@@ -1,18 +1,19 @@
 package com.example.tekberproject2.model;
 
 public class DataTV {
-    private int id;
-    private int airedSeason;
+    private String id;
+    private String airedSeason;
     private String episodeName;
-    private String firstAired;;
+    private String firstAired;
     private String director;
-    private double rating;
-    private GuestStar guestStar;
+    private String rating;
+    private GuestStar guestStar = new GuestStar();
+    private String photos;
 
     public DataTV() {
     }
 
-    public DataTV(int id, int airedSeason, String episodeName, String firstAired, String director, double rating, GuestStar guestStar) {
+    public DataTV(String id, String airedSeason, String episodeName, String firstAired, String director, String rating, GuestStar guestStar, String photos) {
         this.id = id;
         this.airedSeason = airedSeason;
         this.episodeName = episodeName;
@@ -20,21 +21,22 @@ public class DataTV {
         this.director = director;
         this.rating = rating;
         this.guestStar = guestStar;
+        this.photos = photos;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public int getAiredSeason() {
+    public String getAiredSeason() {
         return airedSeason;
     }
 
-    public void setAiredSeason(int airedSeason) {
+    public void setAiredSeason(String airedSeason) {
         this.airedSeason = airedSeason;
     }
 
@@ -62,11 +64,11 @@ public class DataTV {
         this.director = director;
     }
 
-    public double getRating() {
+    public String getRating() {
         return rating;
     }
 
-    public void setRating(double rating) {
+    public void setRating(String rating) {
         this.rating = rating;
     }
 
@@ -76,5 +78,26 @@ public class DataTV {
 
     public void setGuestStar(GuestStar guestStar) {
         this.guestStar = guestStar;
+    }
+
+    public String getPhotos() {
+        return photos;
+    }
+
+    public void setPhotos(String photos) {
+        this.photos = photos;
+    }
+
+    @Override
+    public String toString() {
+        return "DataTV{" +
+                "id=" + id +
+                ", airedSeason=" + airedSeason +
+                ", episodeName='" + episodeName + '\'' +
+                ", firstAired='" + firstAired + '\'' +
+                ", director='" + director + '\'' +
+                ", rating=" + rating +
+                ", guestStar=" + guestStar +
+                '}';
     }
 }

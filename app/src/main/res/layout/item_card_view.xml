@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="4dp"
+    card_view:cardCornerRadius="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/img_item_photo"
+            android:layout_width="150dp"
+            android:layout_height="220dp"
+            android:layout_marginBottom="4dp"
+            android:scaleType="centerCrop"
+            tools:src="@color/colorAccent"
+            >
+
+
+
+        </ImageView>
+
+        <ProgressBar
+            android:id="@+id/progress_bar_img"
+            android:layout_width="150dp"
+            android:layout_height="220dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:indeterminateDrawable="@drawable/progress"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/label_id"
+            android:layout_width="75dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/img_item_photo"
+            android:layout_marginStart="15dp"
+            android:text="Id"
+            android:textColor="@color/colorPrimaryLight"
+            />
+
+        <TextView
+            android:id="@+id/tv_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/label_id"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            tools:text="0001"
+            />
+
+        <TextView
+            android:id="@+id/label_aired_season"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/img_item_photo"
+            android:layout_below="@id/label_id"
+            android:layout_marginStart="15dp"
+            android:text="Aired Seas."
+            android:textColor="@color/colorPrimaryLight"
+            />
+
+        <TextView
+            android:id="@+id/tv_aired_season"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/label_id"
+            android:layout_below="@id/tv_id"
+            android:layout_marginStart="10dp"
+            tools:text="1"
+
+            />
+
+        <TextView
+            android:id="@+id/label_episode_name"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/img_item_photo"
+            android:layout_below="@id/label_aired_season"
+            android:layout_marginStart="15dp"
+            android:text="Episode"
+            android:textColor="@color/colorPrimaryLight"
+            />
+
+        <TextView
+            android:id="@+id/tv_episode_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/label_episode_name"
+            android:layout_below="@id/tv_aired_season"
+            android:layout_marginStart="10dp"
+            android:maxLines="1"
+            tools:text="Cinta Tak Direstui"
+
+            />
+
+        <TextView
+            android:id="@+id/label_first_aired"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/img_item_photo"
+            android:layout_below="@id/label_episode_name"
+            android:layout_marginStart="15dp"
+            android:text="First Aired"
+            android:textColor="@color/colorPrimaryLight"
+            />
+
+        <TextView
+            android:id="@+id/tv_first_aired"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/label_episode_name"
+            android:layout_below="@id/tv_episode_name"
+            android:layout_marginStart="10dp"
+            tools:text="1997-04-28"
+            />
+
+        <TextView
+            android:id="@+id/label_director"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/img_item_photo"
+            android:layout_below="@id/label_first_aired"
+            android:layout_marginStart="15dp"
+            android:text="Director"
+            android:textColor="@color/colorPrimaryLight"
+            />
+
+        <TextView
+            android:id="@+id/tv_director"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/label_episode_name"
+            android:layout_below="@id/tv_first_aired"
+            android:layout_marginStart="10dp"
+            tools:text="Mark Andre Terstegen"
+            android:maxLines="1"
+            />
+
+        <TextView
+            android:id="@+id/label_rating"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/img_item_photo"
+            android:layout_below="@id/label_director"
+            android:layout_marginStart="15dp"
+            android:text="Rating"
+            android:textColor="@color/colorPrimaryLight"
+            />
+
+        <TextView
+            android:id="@+id/tv_rating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/label_episode_name"
+            android:layout_below="@id/tv_director"
+            android:layout_marginStart="10dp"
+            tools:text="10.0"
+            android:maxLines="1"
+            />
+
+        <TextView
+            android:id="@+id/label_guestar"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/img_item_photo"
+            android:layout_below="@id/label_rating"
+            android:layout_marginStart="15dp"
+            android:text="Guestar"
+            android:textColor="@color/colorPrimaryLight"
+            />
+
+        <TextView
+            android:id="@+id/tv_guestar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/label_episode_name"
+            android:layout_below="@id/tv_rating"
+            android:layout_marginStart="10dp"
+            tools:text="Adillatul"
+            android:maxLines="1"
+            />
+
+        <TextView
+            android:id="@+id/tv_guestar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/label_episode_name"
+            android:layout_below="@id/tv_guestar"
+            android:layout_marginStart="10dp"
+            tools:text="Yuda Hendriawan"
+            android:maxLines="1"
+            />
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
