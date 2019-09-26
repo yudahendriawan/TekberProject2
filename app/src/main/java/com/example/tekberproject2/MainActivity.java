@@ -5,8 +5,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.WindowManager;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.tekberproject2.model.DataTV;
 import com.example.tekberproject2.model.GuestStar;
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView rvDataTv;
     private ArrayList<DataTV> list = new ArrayList<>();
+    boolean doubleBackToExitPressedOnce = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,5 +47,27 @@ public class MainActivity extends AppCompatActivity {
         rvDataTv.setLayoutManager(new LinearLayoutManager(this));
         AdapterTV adapterTV = new AdapterTV(list, getApplicationContext());
         rvDataTv.setAdapter(adapterTV);
+    }
+
+    /**
+     * To exit with twice clicked back button
+     */
+    @Override
+    public void onBackPressed(){
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed();
+            return;
+        }
+
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce=false;
+            }
+        }, 2000);
     }
 }
