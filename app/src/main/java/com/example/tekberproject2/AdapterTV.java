@@ -23,6 +23,9 @@ import com.example.tekberproject2.model.DataTV;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class AdapterTV extends RecyclerView.Adapter<AdapterTV.AdapterTvViewHolder> {
 
     private ArrayList<DataTV> listDataTv;
@@ -51,7 +54,7 @@ public class AdapterTV extends RecyclerView.Adapter<AdapterTV.AdapterTvViewHolde
         return listDataTv.size();
     }
 
-    public int getItemViewType(int position){
+    public int getItemViewType(int position) {
         listDataTv.get(position);
         return position;
     }
@@ -64,28 +67,33 @@ public class AdapterTV extends RecyclerView.Adapter<AdapterTV.AdapterTvViewHolde
 
     public class AdapterTvViewHolder extends RecyclerView.ViewHolder {
 
+        @BindView(R2.id.img_item_photo)
         ImageView imgPhoto;
+        @BindView(R2.id.progress_bar_img)
         ProgressBar progressBar;
-        TextView id, airedSeason, episodeName, firstAired, director, rating, guestar, guestar2;
+        @BindView(R2.id.tv_id)
+        TextView id;
+        @BindView(R2.id.tv_aired_season)
+        TextView airedSeason;
+        @BindView(R2.id.tv_episode_name)
+        TextView episodeName;
+        @BindView(R2.id.tv_first_aired)
+        TextView firstAired;
+        @BindView(R2.id.tv_director)
+        TextView director;
+        @BindView(R2.id.tv_rating)
+        TextView rating;
+        @BindView(R2.id.tv_guestar)
+        TextView guestar;
+        @BindView(R2.id.tv_guestar2)
+        TextView guestar2;
 
         public AdapterTvViewHolder(@NonNull View itemView) {
             super(itemView);
-
-            imgPhoto = itemView.findViewById(R.id.img_item_photo);
-            id = itemView.findViewById(R.id.tv_id);
-            airedSeason = itemView.findViewById(R.id.tv_aired_season);
-            episodeName = itemView.findViewById(R.id.tv_episode_name);
-            firstAired = itemView.findViewById(R.id.tv_first_aired);
-            director = itemView.findViewById(R.id.tv_director);
-            rating = itemView.findViewById(R.id.tv_rating);
-            guestar = itemView.findViewById(R.id.tv_guestar);
-            guestar2 = itemView.findViewById(R.id.tv_guestar2);
-            progressBar = itemView.findViewById(R.id.progress_bar_img);
-
+            ButterKnife.bind(this, itemView);
         }
 
         public void binding(final DataTV dataTV) {
-
             id.setText(dataTV.getId());
             airedSeason.setText(dataTV.getAiredSeason());
             episodeName.setText(dataTV.getEpisodeName());
