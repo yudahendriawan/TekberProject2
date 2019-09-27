@@ -34,7 +34,6 @@ public class ListDataTV {
             dataTV.getGuestStar().setGender2(aData[9]);
             dataTV.setPhotos(aData[10]);
             list.add(dataTV);
-            Log.d(TAG, "getListData: "+dataTV.getGuestStar().getNama());
         }
         return list;
     }

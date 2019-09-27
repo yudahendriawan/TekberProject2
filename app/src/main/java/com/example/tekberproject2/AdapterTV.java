@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,6 +22,7 @@ import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.Target;
 import com.example.tekberproject2.model.DataTV;
 
+import java.net.ConnectException;
 import java.util.ArrayList;
 
 import butterknife.BindView;
@@ -103,24 +105,24 @@ public class AdapterTV extends RecyclerView.Adapter<AdapterTV.AdapterTvViewHolde
             guestar.setText(dataTV.getGuestStar().getNama());
             guestar2.setText(dataTV.getGuestStar().getNama2());
 
-            Glide.with(itemView.getContext())
-                    .load(dataTV.getPhotos())
-                    .apply(new RequestOptions().override(1000, 1000))
-                    .listener(new RequestListener<Drawable>() {
-                        @Override
-                        public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
-                            progressBar.setVisibility(View.GONE);
-                            return false;
-                        }
+                Glide.with(itemView.getContext())
+                        .load(dataTV.getPhotos())
+                        .apply(new RequestOptions().override(1000, 1000))
+                        .listener(new RequestListener<Drawable>() {
+                            @Override
+                            public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
+                                progressBar.setVisibility(View.GONE);
+                                Toast.makeText(itemView.getContext(), "No Internet Connection", Toast.LENGTH_SHORT).show();
+                                return false;
+                            }
 
-                        @Override
-                        public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
-                            progressBar.setVisibility(View.GONE);
-                            return false;
-                        }
-                    })
-                    .into(imgPhoto);
-
+                            @Override
+                            public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
+                                progressBar.setVisibility(View.GONE);
+                                return false;
+                            }
+                        })
+                        .into(imgPhoto);
         }
     }
 }
